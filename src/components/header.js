@@ -1,3 +1,4 @@
+//header.js
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Menu, X } from "react-feather"
@@ -99,6 +100,8 @@ export default function Header() {
           <div>{cta && <Button to={cta.href}>{cta.text}</Button>}</div>
         </Flex>
       </Container>
+
+
       <Container className={mobileHeaderNavWrapper[isOpen ? "open" : "closed"]}>
         <Space size={2} />
         <Flex variant="spaceBetween">
@@ -135,6 +138,8 @@ export default function Header() {
           </Flex>
         </Flex>
       </Container>
+
+      
       {isOpen && (
         <div className={mobileNavOverlay}>
           <nav>
