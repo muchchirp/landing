@@ -33,7 +33,11 @@ export default function Hero(props) {
             </Heading>
             <Subhead as="h2">{props.subhead}</Subhead>
             <Text>{props.text}</Text>
+            <Text>{props.emphasis}</Text>
+            {/* <Text>{props.richtext}</Text> */}
+
             <ButtonList links={props.links} />
+            <Text>{props.moneyback}</Text>
           </Box>
         </Flex>
       </Container>
@@ -48,7 +52,8 @@ export const query = graphql`
     h1: heading
     subhead
     text
-  
+    emphasis
+    moneyback
     links {
       id
       href

@@ -124,6 +124,8 @@ exports.createSchemaCustomization = async ({ actions }) => {
       subhead: String
       image: HomepageImage
       text: String
+      emphasis: String
+      moneyback: String
       links: [HomepageLink]
     }
 
@@ -386,6 +388,8 @@ exports.createSchemaCustomization = async ({ actions }) => {
       subhead: String
       image: HomepageImage @link(from: "image___NODE")
       text: String
+      emphasis: String
+      moneyback: String
       links: [HomepageLink] @link(from: "links___NODE")
     }
 
