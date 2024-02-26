@@ -1,6 +1,10 @@
 // src/components/CustomCookieConsent.js
 import React, { useState, useEffect } from 'react';
 import * as styles from './CustomCookieConsent.css'; // Adjust the path to your .css.ts file
+import {
+    Button,
+    NavLink,
+  } from "./ui"
 
 const CustomCookieConsent = () => {
     const [visible, setVisible] = useState(false);
@@ -51,10 +55,10 @@ const CustomCookieConsent = () => {
 
     return (
         <div className={styles.cookieConsentContainer}>
-            <p className={styles.message}>We use cookies for a better browsing experience. <a href="/cookie-policy">Learn more</a></p>
-            <div className={styles.buttons}>
-                <button className={styles.acceptButton} onClick={acceptCookies}>Accept All</button>
-                <button className={styles.rejectText} onClick={rejectCookies}>Reject All</button>
+            <p className={styles.message}>We use cookies for a better browsing experience. <a href="/cookie-policy">More...</a></p>
+            <div>
+                <Button onClick={acceptCookies} style={{ marginRight: '10px' }}>Accept All</Button>
+                <NavLink onClick={rejectCookies}>Reject All</NavLink>
             </div>
         </div>
     );
