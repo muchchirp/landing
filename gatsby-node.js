@@ -390,6 +390,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
       emphasis: String
       moneyback: String
+
       links: [HomepageLink] @link(from: "links___NODE")
     }
 

@@ -39,6 +39,9 @@ export default function Hero(props) {
             <ButtonList links={props.links} />
             <Text>{props.moneyback}</Text>
           </Box>
+
+
+
         </Flex>
       </Container>
     </Section>
@@ -51,6 +54,7 @@ export const query = graphql`
     kicker
     h1: heading
     subhead
+
     text
     emphasis
     moneyback
